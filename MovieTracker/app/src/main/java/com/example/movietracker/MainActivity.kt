@@ -42,8 +42,7 @@ class MainActivity : AppCompatActivity() {
         ratingLabel = findViewById(R.id.ratingLabel)
         saveButton = findViewById(R.id.saveButton)
         deleteButton = findViewById(R.id.deleteButton)
-
-        // Nasłuchiwacze
+        
         findViewById<Button>(R.id.searchButton).setOnClickListener { searchMovie(movieInput.text.toString()) }
         saveButton.setOnClickListener { saveCurrentMovie() }
         deleteButton.setOnClickListener { deleteCurrentMovie() }

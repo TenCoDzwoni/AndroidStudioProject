@@ -1,0 +1,3 @@
+Ścieżka do zapisanych filmów znajduję się w "DEVICE EXPLORER" i jest zapisana poniżej
+/data/data/com.example.movietracker/shared_prefs/
+
