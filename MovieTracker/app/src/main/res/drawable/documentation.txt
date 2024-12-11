@@ -1,3 +1,13 @@
 Ścieżka do zapisanych filmów znajduję się w "DEVICE EXPLORER" i jest zapisana poniżej
 /data/data/com.example.movietracker/shared_prefs/
 
+Metoda searchMovie odpowiada za pobranie danych z zewnętrznego API o filmach. Zostaje wywoływana, gdy użytkownik wpisze tytuł filmu i kliknie przycisk "Szukaj".
+Jak działa:
+Tworzy URL zapytania API, konstruując go z podstawowego endpointu i tytułu filmu. Dzięki funkcji replace(" ", "+") zamienia spacje na znaki "+" dla poprawnej składni URL.
+Używa klasy OkHttpClient do wysłania żądania GET do API (https://www.omdbapi.com/) z podanym tytułem filmu.
+Po otrzymaniu odpowiedzi, w obszarze onResponse parsuje JSON-ową odpowiedź i tworzy obiekt Movie zawierający dane takie jak tytuł, opis i URL plakatu.
+
+SharedPreferences to system przechowywania danych w aplikacji, używany do przechowywania małych, klucz/wartość danych, które są dostępne lokalnie na urządzeniu.
+
+currentMovie jest inicjalizowane jako null, ponieważ jest to obiekt, który będziemy wypełniać danymi z API po udanym zapytaniu.
+Taki zabieg ma na celu zabezpieczenie, abyśmy mieli "czysty" obiekt, zanim API zwróci dane
