@@ -1,0 +1,10 @@
+Aplikacja służy do rejestrowania aktywności fizycznych, takich jak spacer, bieg czy trening siłowy.
+Użytkownik wprowadza dane w polach tekstowych, wybiera intensywność na pasku (SeekBar) i rodzaj aktywności za pomocą przycisków radiowych (RadioGroup).
+Następnie, po kliknięciu przycisku, dane są zapisywane i wyświetlane w liście za pomocą RecyclerView.
+
+Zamiast tworzyć nowe widoki dla każdego elementu na liście, RecyclerView ponownie używa (recyklinguje) istniejące widoki.
+Dzięki temu działa szybciej i zużywa mniej pamięci, szczególnie przy dużych zestawach danych.
+
+ActivityAdapter odpowiada za dostosowanie danych do widoków w RecyclerView.
+Adapter pobiera dane (w tym dystans, czas, spalone kalorie) i "wiąże" je z odpowiednim widokiem.
+Adapter łączy dane (activities) z RecyclerView oraz dodatkowo, gdy klikniesz element, uruchamia ActivityDialog.
