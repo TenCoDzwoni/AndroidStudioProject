@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         repository = ActivityRepository(this)
-        activities = repository.getActivities().toMutableList()
+        var lista = mutableListOf<ActivityModel>()
+        activities = lista
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerViewActivities)
         recyclerView.layoutManager = LinearLayoutManager(this)
